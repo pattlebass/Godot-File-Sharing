@@ -35,6 +35,7 @@ public class GodotFileSharing extends org.godotengine.godot.plugin.GodotPlugin {
         return "GodotFileSharing";
     }
 
+    // Inspired by https://github.com/Shin-NiL/Godot-Android-Share-Plugin
     @UsedByGodot
     public void shareFile(String path, String title, String subject, String text, String mimeType) {
         Log.d(TAG, "shareFile called on path: " + path);
