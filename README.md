@@ -18,7 +18,7 @@ shareFile(path: String, title: String, subject: String, text: String, mimeType: 
 > Arguments cannot be `null`, instead use empty strings.
 
 > **Note**
-> See [a list of common MIME types.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
+> See [a list of common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
 
 # Usage
@@ -27,8 +27,8 @@ var android_share
 
 
 func _ready() -> void:
-    if Engine.has_singleton("GodotFilePicker"):
-        android_share = Engine.get_singleton("GodotFilePicker")
+    if Engine.has_singleton("GodotFileSharing"):
+        android_share = Engine.get_singleton("GodotFileSharing")
 
 
 func _on_Button_pressed() -> void:
