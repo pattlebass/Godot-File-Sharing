@@ -12,7 +12,7 @@ shareFile(path: String, title: String, subject: String, text: String, mimeType: 
 ```
 
 > **Note**
-> `path` has to be a file saved under `user://`.
+> `path` has to be a file saved under `user://` and it has to be globalized with `ProjectSettings.globalize_path()`.
 
 > **Note**
 > Arguments cannot be `null`, instead use empty strings.
@@ -32,7 +32,8 @@ func _ready() -> void:
 
 
 func _on_Button_pressed() -> void:
-    android_share.shareFile("user://path/to/file", "The title", "The subject", "The text", "image/*")
+    var absolute_path = ProjectSettings.globalize_path("user://path/to/file")
+    android_share.shareFile(absolute_path, "The title", "The subject", "The text", "image/*")
     # or
-    android_share.shareFile("user://path/to/file", "", "", "", "")
+    android_share.shareFile(absolute_path, "", "", "", "")
 ```
